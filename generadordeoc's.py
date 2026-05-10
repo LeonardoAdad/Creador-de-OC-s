@@ -1,14 +1,60 @@
 import random
 import time 
 
-Tematica = {
-    "Fantacia": {
-        "Profeciones": ["Mago", "Caballero", "Hada", "Arquero", "Asesino", "Realeza", "Plebeyo", "Bardo", "Bufon", "Nigromante"],
-        "Razas": ["Humano", "Elfo", "Enano", "Orco", "Goblin", "Tifling", "Celestial", "Draconido", "Mediano", "Semielfo"],
-        "Escenarios": ["Salon del trono", "Bosque magico", "escuela Mágica", "Montaña Misteriosa", "Isla Perdida", "Reino Subterráneo", "Caverna de Dragones", "Templo Antiguo", "villa", "Taberna"]
-    },
-    "Ciencia Ficcion": {
-        "Profeciones": ["Pandillero", "Hacker/Netrunner", "Corporativo", "Policia", "Mercenario", "Piloto", "Nomada", "Fixer", "Rockerboy", "Periodista"],
-        "Escenarios": ["Ciudad futurista", "Base espacial", "Barrios bajos", "Nave espacial", "Afueras de la ciudad", "Edificio corpotarivo", "Ciudad subterránea", "Bar lujoso", "Ciberespacio", "Bar clandestino"]
-    }
-    },
+# ── Diccionarios ──
+escenarios = {
+    "Fantasía": [
+        "Castillo", "Cabaña", "Bosque Mágico", "Aldea", "Cueva",
+        "Taberna", "Calabozos", "Carruaje", "Establo de caballos", "Escuela mágica"
+    ],
+    "Ciencia ficción": [
+        "Bar inteligente", "Civilizaciones espaciales", "Ciudad futurista",
+        "Desarrollo en la luna", "Convivir con aliens", "El páramo",
+        "Desierto con vida", "Ciudad post apocalíptica", "Vida bajo tierra", "Guerras nucleares"
+    ],
+    "Actualidad": [
+        "El rancho", "Puestos callejeros", "Centro de la ciudad", "Cafetería",
+        "Oficina", "Barrio", "Nevería la Michoacana", "Transporte público",
+        "Hospital", "Obra negra"
+    ]
+}
+
+profesiones = {
+    "Fantasía": [
+        "Mago", "Caballero", "Hada", "Elfo", "Goblin",
+        "Realeza", "Plebello", "Ogro", "Arquero", "Bufon"
+    ],
+    "Ciencia ficción": [
+        "Hacker", "Pandillero", "Yakuza", "Drug dealer", "Corporativo",
+        "Policía", "Político", "Trabajador/a de noche", "Ingeniero", "Sicario"
+    ],
+    "Actualidad": [
+        "Doctor", "Estudiante", "Chofer", "Homeless", "Godines",
+        "Chef", "Artista", "Cholo", "Programador", "Abogado", "Taquero"
+    ]
+}
+
+tematica = {
+    "Fantasía" , "Ciencia ficción" , "Actualidad"}
+
+genero = {
+    "Femenino" , "Masculino" , "No binario"}
+
+caracteristicas_fisicas = {
+    "Complexión": [
+        "Robusta", "Esbelta", "Media", "Definida"
+    ],
+    "Cabello": [
+        "Largo", "Medio", "Corto", "Pelón"
+    ],
+    "Color de piel": [
+        "Afro", "Moreno", "Blanco", "Olivo", "Albino", "Almendrado"
+    ],
+    "Color fantasía": [
+        "Rojo", "Verde", "Morado", "Azul", "Amarillo", "Rosa"
+    ]
+}
+
+colores_principales = {
+    "Fríos", "Calidos", "Pasteles "
+}
