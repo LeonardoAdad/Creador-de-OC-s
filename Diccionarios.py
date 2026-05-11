@@ -39,10 +39,12 @@ Razas = {
 }
 
 tematica = {
-    "Fantasía" , "Ciencia ficción" , "Actualidad"}
+    "Fantasía", "Cyberpunk", "Actualidad"
+}
 
 genero = {
-    "Femenino" , "Masculino" , "No binario"}
+    "Femenino", "Masculino", "No binario"
+}
 
 caracteristicas_fisicas = {
     "Complexión": [
@@ -52,12 +54,12 @@ caracteristicas_fisicas = {
         "Largo", "Medio", "Corto", "Pelón"
     ],
     "Color de piel": [
-        "Afro", "Moreno", "Blanco", "Olivo", "Albino", "Almendrado" "Rojo", "Verde", "Morado", "Azul", "Amarillo", "Rosa"
+        "Afro", "Moreno", "Blanco", "Olivo", "Albino", "Almendrado", "Rojo", "Verde", "Morado", "Azul", "Amarillo", "Rosa"
     ]
 }
 
 colores_principales = {
-    "Fríos", "Calidos", "Pasteles "
+    "Fríos", "Calidos", "Pasteles"
 }
 
 
