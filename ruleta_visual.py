@@ -3,6 +3,8 @@ import random
 import math
 import tkinter as tk
 from tkinter import messagebox
+import os
+from datetime import datetime
 from Diccionarios import Razas, tematica, genero, caracteristicas_fisicas, colores_principales, escenarios, profesiones
 from Diccionarios import Acciones_por_profesion_y_escenario as ACCIONES_PROFESION_ESCENARIO
 
@@ -363,6 +365,7 @@ class GeneradorOC:
         print("="*50 + "\n")
 
         descripcion = self.generar_descripcion_detallada()
+        self.guardar_oc(descripcion)
 
         # Mostrar una ventana emergente modal con Tkinter (bloquea hasta cerrarla)
         try:
@@ -414,6 +417,43 @@ class GeneradorOC:
 
         descripcion = primer_parrafo + "\n\n" + f"Acción: {segundo_parrafo}" + ("\n" + paleta_text if paleta_text else "")
         return descripcion
+    
+    def guardar_oc(self, descripcion):
+        """Guarda el OC generado en un archivo .txt dentro de la carpeta OC-s"""
+
+        # Ruta de la carpeta donde se guardarán los OC's
+        carpeta_oc = "OC-s"
+
+        # Crear carpeta si no existe
+        os.makedirs(carpeta_oc, exist_ok=True)
+
+        # Fecha y hora para crear nombres únicos
+        fecha = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+        # Nombre del archivo
+        nombre_archivo = f"OC_{fecha}.txt"
+
+        # Ruta completa
+        ruta_archivo = os.path.join(carpeta_oc, nombre_archivo)
+
+        # Contenido del archivo
+        contenido = []
+        contenido.append("=" * 50)
+        contenido.append("PERSONAJE GENERADO")
+        contenido.append("=" * 50)
+
+        for key, value in self.resultados.items():
+            contenido.append(f"{key}: {value}")
+
+        contenido.append("\nDESCRIPCIÓN DETALLADA")
+        contenido.append("=" * 50)
+        contenido.append(descripcion)
+
+        # Guardar archivo
+        with open(ruta_archivo, "w", encoding="utf-8") as archivo:
+            archivo.write("\n".join(contenido))
+
+        print(f"OC guardado en: {ruta_archivo}")
     
     def ejecutar(self):
         """Loop principal"""
